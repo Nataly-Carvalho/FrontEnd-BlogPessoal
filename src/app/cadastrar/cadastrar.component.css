@@ -1,0 +1,16 @@
+#img-bg{
+    background-image: url(https://i.pinimg.com/originals/07/5a/de/075ade028580e551fc227649650c79d2.gif);
+
+    min-height: 695px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}.btn-cor{
+    background-color: #ECB8A5;
+}
+.bg{
+    background-color: #ECCFC3;
+}
+.btn-cor-c{
+    background-color: #957D95;
+}
