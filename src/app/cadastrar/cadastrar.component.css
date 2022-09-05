@@ -10,7 +10,11 @@
 }
 .bg{
     background-color: #ECCFC3;
+    
 }
 .btn-cor-c{
     background-color: #957D95;
+}
+.bd{
+    border-radius: 20px;
 }

@@ -1,5 +1,6 @@
 #img-bg{
     background-image: url(https://i.pinimg.com/originals/01/f9/bf/01f9bfa6d9811a577fb0e0fbf37d5a85.gif);
+ 
 
     min-height: 695px;
     background-position: center;
@@ -10,4 +11,7 @@
 }
 .bg{
     background-color: #ECCFC3;
+}
+.bd{
+    border-radius: 20px;
 }
