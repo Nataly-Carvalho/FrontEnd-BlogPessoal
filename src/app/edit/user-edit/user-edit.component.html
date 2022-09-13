@@ -1,0 +1,62 @@
+<div class="container mb-5 mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Atualizar meu usuário</h1>
+
+        </div>
+    </div>
+
+    
+    <div class="row d-flex justify-content-center ">
+
+        <div class="col-md-10 mr-4 ">
+          
+            <div class="form-grup ">
+                <label for="nome">Nome</label>
+                <input  [(ngModel)]='user.nome' class="form-control bd" type="text" name="nome" id="nome" 
+                placeholder="Seu nome">
+                </div>
+
+                <div class="form-grup">
+                    <label for="usuario">Usuário</label>
+                    <input [(ngModel)]='user.usuario' class="form-control bd" type="text" name="usuario" id="usuario"
+                        placeholder="Seu usuário">
+                </div>
+
+                <div class="form-grup">
+                    <label for="foto">Foto</label>
+                    <input [(ngModel)]='user.foto' class="form-control bd " type="text" name="foto" id="foto"
+                        placeholder="Link da sua foto">
+                </div>
+
+                <div class="form-grup">
+                    <label for="senha">Senha</label>
+                    <input (input)='confirmSenha($event)' class="form-control bd" type="password" name="senha" id="senha" placeholder="Sua senha">
+                </div>
+
+                <div class="form-grup">
+                    <label for="confirmarSenha">Confirmar senha</label>
+                    <input [(ngModel)]='user.senha'class="form-control bd" type="password" name="confirmaSenha" id="confirmaSenha"
+                        placeholder="Confirme sua senha">
+                </div>
+
+                <div class="form-grup">
+                    <label for="tipo">Tipo de Usuário</label>
+                    <select class="form-control bd" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                        <option>Selecione um tipo de usuário</option>
+                        <option value="normal">Normal</option>
+                        <option value="adm">Administrador</option>
+                    </select>
+
+                </div>
+                <br>
+                <div class="d-flex justify-content-center mb-4">
+
+                    <button type="submit" class="btn btn-cor-c btn-danger mr-4"
+                     routerLink="/inicio">Cancelar</button>
+
+                    <button type="submit" class="btn bg"(click)='atualizar()'>Atualizar</button>
+                </div>
+            </div>
+            
+</div> 
