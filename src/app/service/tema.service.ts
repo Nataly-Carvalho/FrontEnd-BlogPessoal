@@ -18,23 +18,23 @@ token={
 }
 
     getAllTema(): Observable<Tema[]>{
-     return this.http.get<Tema[]>('https://natalyblogpessoal.herokuapp.com/tema', this.token)
+     return this.http.get<Tema[]>('https://blogpessoal-v0pu.onrender.com/tema', this.token)
     }
 
     getByIdTema(id: number): Observable<Tema>{
-      return this.http.get<Tema>(`https://natalyblogpessoal.herokuapp.com/tema/${id}`, this.token)
+      return this.http.get<Tema>(`https://blogpessoal-v0pu.onrender.com/tema/${id}`, this.token)
     }
 
     postTema(tema: Tema): Observable<Tema>{
-      return this.http.post<Tema>('https://natalyblogpessoal.herokuapp.com/tema', tema, this.token)
+      return this.http.post<Tema>('https://blogpessoal-v0pu.onrender.com/tema', tema, this.token)
     }
     
     putTema(tema: Tema):Observable<Tema>{
-      return this.http.post<Tema>('https://natalyblogpessoal.herokuapp.com/tema', tema, this.token)
+      return this.http.post<Tema>('https://blogpessoal-v0pu.onrender.com/tema', tema, this.token)
     }
 
     deleteTema(id: number){
-      return this.http.delete(`https://natalyblogpessoal.herokuapp.com/tema/${id}`, this.token)
+      return this.http.delete(`https://blogpessoal-v0pu.onrender.com/tema/${id}`, this.token)
     }
   }
 
