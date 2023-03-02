@@ -16,9 +16,9 @@
                         placeholder="Seu nome">
 
                         <div class="form-grup">
-                            <label for="usuario">Usuário</label>
+                            <label for="usuario">Email</label>
                             <input [(ngModel)]='user.usuario' class="form-control bd" type="text" name="usuario" id="usuario"
-                                placeholder="Seu usuário">
+                                placeholder="Seu Email">
                         </div>
                         <div class="form-grup">
                             <label for="foto">Foto</label>
@@ -29,6 +29,7 @@
                         <div class="form-grup">
                             <label for="senha">Senha</label>
                             <input (input)='confirmSenha($event)' class="form-control bd" type="password" name="senha" id="senha" placeholder="Sua senha">
+                            A senha deve conter no minimo 8 caracteres!
                         </div>
 
                         <div class="form-grup">
