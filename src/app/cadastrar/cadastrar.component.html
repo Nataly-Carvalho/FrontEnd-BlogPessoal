@@ -10,50 +10,54 @@
 
                 <div class="col-md-10 mr-4">
                     <h1 class="text-center">Cadastro</h1>
-                    <div class="form-grup ">
-                        <label for="nome">Nome</label>
-                        <input  [(ngModel)]='user.nome' class="form-control bd" type="text" name="nome" id="nome" 
-                        placeholder="Seu nome">
+                    <div class="form-grup form-floating mb-3">
+                        <input [(ngModel)]='user.nome' class="form-control bd" type="text" name="nome"
+                            id="nome floatingInput" placeholder="Seu nome">
+                        <label for="nome floatingInput">Nome</label>
 
-                        <div class="form-grup">
-                            <label for="usuario">Email</label>
-                            <input [(ngModel)]='user.usuario' class="form-control bd" type="text" name="usuario" id="usuario"
-                                placeholder="Seu Email">
+                        <div class="form-grup form-floating mt-3">
+                            <input [(ngModel)]='user.usuario' class="form-control bd" type="text" name="usuario"
+                                id="usuario floatingInput" placeholder="Seu Email">
+                            <label for="usuario floatingInput">Email</label>
+
                         </div>
-                        <div class="form-grup">
-                            <label for="foto">Foto</label>
-                            <input [(ngModel)]='user.foto' class="form-control bd " type="text" name="foto" id="foto"
-                                placeholder="Link da sua foto">
+                        <div class="form-grup form-floating mt-3">
+                            <input [(ngModel)]='user.foto' class="form-control bd " type="text" name="foto"
+                                id="foto floatingInput" placeholder="Link da sua foto">
+                            <label for="foto  floatingInput">Foto</label>
+
                         </div>
 
-                        <div class="form-grup">
-                            <label for="senha">Senha</label>
-                            <input (input)='confirmSenha($event)' class="form-control bd" type="password" name="senha" id="senha" placeholder="Sua senha">
+                        <div class="form-grup form-floating mt-3">
+                            <input (input)='confirmSenha($event)' class="form-control bd" type="password" name="senha"
+                                id="senha floatingPassword" placeholder="Sua senha">
+                            <label for="senha floatingPassword">Senha</label>
+
                             A senha deve conter no minimo 8 caracteres!
                         </div>
-                          <br>
-                        <div class="form-grup">
-                            <label for="confirmarSenha">Confirmar senha</label>
-                            <input [(ngModel)]='user.senha'class="form-control bd" type="password" name="confirmarSenha" id="confirmarSenha"
+                        <br>
+                        <div class="form-grup form-floating ">
+                            <input [(ngModel)]='user.senha' class="form-control bd" type="password"
+                                name="confirmarSenha" id="confirmarSenha floatingPassword"
                                 placeholder="Confirme sua senha">
+                            <label for="confirmarSenha floatingPassword">Confirmar senha</label>
+
                         </div>
 
-                        <div class="form-grup">
-                            <label for="tipo">Tipo de Usuário</label>
-                            <select class="form-control bd" name="tipo" id="tipo" (change)='tipoUser($event)'>
-                                <option>Selecione um tipo de usuário</option>
+                        <div class="form-grup form-floating mt-3">
+                            <select class="form-control bd" name="tipo" id="tipo floatingSelect"(change)='tipoUser($event)'>
+                                <option value="">Selecione o tipo de usuario</option>
                                 <option value="normal">Normal</option>
                                 <option value="adm">Administrador</option>
                             </select>
-
+                            <label for="tipo floatingSelect">Tipo de Usuário</label>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">
 
-                            <button type="submit" class="btn btn-cor-c mr-4"
-                             routerLink="/entrar">Cancelar</button>
+                            <button type="submit" class="btn btn-cor-c mr-4" routerLink="/entrar">Cancelar</button>
 
-                            <button type="submit" class="btn btn-cor"(click)='cadastrar()'>Cadastrar</button>
+                            <button type="submit" class="btn btn-cor" (click)='cadastrar()'>Cadastrar</button>
                         </div>
                     </div>
 

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
 import { AuthService } from '../service/auth.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-entrar',
@@ -15,7 +16,8 @@ import { AuthService } from '../service/auth.service';
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alerta: AlertasService
   ) { }
 
   ngOnInit(){
@@ -30,6 +32,7 @@ import { AuthService } from '../service/auth.service';
       environment.nome= this.userLogin.nome
       environment.foto = this.userLogin.foto
       environment.id = this.userLogin.id
+      environment.tipo = this.userLogin.tipo
       
       console.log(environment.token)
       console.log(environment.nome)
@@ -39,7 +42,7 @@ import { AuthService } from '../service/auth.service';
   
     }, erro=>{
       if(erro.status == 401){
-        alert('Usuario ou senha estão incorretos!')
+       this.alerta.showAlertDanger('Usuario ou senha estão incorretos!')
       }
     })
 

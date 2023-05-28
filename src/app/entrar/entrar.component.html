@@ -9,14 +9,16 @@
 
                     <h1>Entrar</h1>
 
-                    <div class="form-grup">
-                        <label for="usuario">Email</label>
-                        <input [(ngModel)]="userLogin.usuario" class="form-control bd" type="text" name="usuario" id="usuario" placeholder="Seu Email">
+                    <div class="form-grup form-floating">
+                        <input [(ngModel)]="userLogin.usuario" class="form-control bd" type="text" name="usuario" id="usuario  floatingInput" placeholder="Seu Email">
+                        <label for="usuario floatingInput" >Email</label>
+                        
                     </div>
 
-                    <div class="form-grup">
-                        <label for="usuario">Senha</label>
-                        <input [(ngModel)]="userLogin.senha" class="form-control bd" type="password" name="senha" id="senha" placeholder="Sua senha">
+                    <div class="form-grup form-floating mt-3">
+                        <input [(ngModel)]="userLogin.senha" class="form-control bd" type="password" name="senha" id="senha floatingPassword" placeholder="Sua senha">
+                        <label for="usuario floatingPassword">Senha</label>
+                        
                     </div>
                     <br>
                     <div class="d-flex justify-content-center">

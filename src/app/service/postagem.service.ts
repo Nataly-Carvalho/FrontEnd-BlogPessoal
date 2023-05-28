@@ -25,6 +25,9 @@ export class PostagemService {
   postPostagem(postagem: Postagem): Observable<Postagem>{
     return this.http.post<Postagem>('https://blogpessoal-drm3.onrender.com/postagens', postagem, this.token)
   }
+  getByTituloPostagem(titulo:string):Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://blogpessoal-drm3.onrender.com/postagens/titulo/${titulo}`,this.token)
+  }
 
   putPostagem(postagem: Postagem):Observable<Postagem>{
     return this.http.put<Postagem>('https://blogpessoal-drm3.onrender.com/postagens', postagem, this.token)
