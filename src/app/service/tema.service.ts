@@ -18,26 +18,26 @@ token={
 }
 
     getAllTema(): Observable<Tema[]>{
-     return this.http.get<Tema[]>('https://blogpessoal-drm3.onrender.com/tema', this.token)
+     return this.http.get<Tema[]>('https://blogpessoal-82v9.onrender.com/tema', this.token)
     }
 
     getByIdTema(id: number): Observable<Tema>{
-      return this.http.get<Tema>(`https://blogpessoal-drm3.onrender.com/tema/${id}`, this.token)
+      return this.http.get<Tema>(`https://blogpessoal-82v9.onrender.com/tema/${id}`, this.token)
     }
     getByNomeTema(nome: string): Observable<Tema[]>{
-      return this.http.get<Tema[]>(`https://blogpessoal-drm3.onrender.com/tema/nome/${nome}`, this.token)
+      return this.http.get<Tema[]>(`https://blogpessoal-82v9.onrender.com/tema/nome/${nome}`, this.token)
     }
 
     postTema(tema: Tema): Observable<Tema>{
-      return this.http.post<Tema>('https://blogpessoal-drm3.onrender.com/tema', tema, this.token)
+      return this.http.post<Tema>('https://blogpessoal-82v9.onrender.com/tema', tema, this.token)
     }
     
     putTema(tema: Tema):Observable<Tema>{
-      return this.http.post<Tema>('https://blogpessoal-drm3.onrender.com/tema', tema, this.token)
+      return this.http.post<Tema>('https://blogpessoal-82v9.onrender.com/tema', tema, this.token)
     }
 
     deleteTema(id: number){
-      return this.http.delete(`https://blogpessoal-drm3.onrender.com/tema/${id}`, this.token)
+      return this.http.delete(`https://blogpessoal-82v9.onrender.com/tema/${id}`, this.token)
     }
   }
 
